@@ -97,6 +97,12 @@ sudo sh -c "git clone --branch ros2 https://github.com/Kukanani/vision_msgs ${RO
     cp -r demos/demo_nodes_py ${ROS_BUILD_ROOT}/src && \
     rm -r -f demos"
 
+# Fix setuptools 
+sudo apt-get install python-dev 
+sudo apt-get install build-essential
+python -m pip install -U pip or python3 -m pip install -U pip 
+pip3 install --upgrade setuptools
+
 # install dependencies using rosdep
 sudo apt-get update
     cd ${ROS_BUILD_ROOT} 
